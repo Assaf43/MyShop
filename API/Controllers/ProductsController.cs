@@ -9,9 +9,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ProductsController : ControllerBase
+
+    public class ProductsController : BaseApiController
     {
         public IGenericRepository<Product> _productsRepo { get; }
         public IGenericRepository<ProductBrand> _productBrandRepo { get; }
