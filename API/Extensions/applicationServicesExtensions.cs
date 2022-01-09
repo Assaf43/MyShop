@@ -26,7 +26,7 @@ namespace API.Extensions
                         Errors = errors
                     };
 
-                    return new BadRequestObjectResult(errors);
+                    return new BadRequestObjectResult(errorResponse);
                 };
             });
 
