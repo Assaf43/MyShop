@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { BasketService } from 'src/app/basket/basket.service';
 import { IProduct } from 'src/app/shared/models/product';
 
 @Component({
@@ -11,9 +12,16 @@ export class ProductItemComponent implements OnInit {
 
   @Input() product: IProduct;
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(
+    private sanitizer: DomSanitizer,
+    private basketService: BasketService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  addItemToBasket() {
+    this.basketService.addItemToBasket(this.product);
   }
 
   sanitizeImageUrl(imageUrl: string): SafeUrl {

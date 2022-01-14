@@ -1,18 +1,10 @@
-
-
-<ngx-spinner 
-    bdColor = "#fff" 
-    size = "medium" 
-    color = "#25a2b1" 
-    type = "ball-spin" 
-    [fullScreen] = "true">
-    <p style="color: white" > Loading... </p>
+<ngx-spinner bdColor="rgba(255,255,255,0.7)" color="#333333" type="timer">
+  <p style="color: white">Loading...</p>
 </ngx-spinner>
 
 <app-nav-bar></app-nav-bar>
 <app-section-header></app-section-header>
 
-<div >    
-    <router-outlet></router-outlet>
+<div>
+  <router-outlet></router-outlet>
 </div>
-
