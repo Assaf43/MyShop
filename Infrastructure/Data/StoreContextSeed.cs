@@ -45,6 +45,7 @@ namespace Infrastructure.Data
                 if (!context.Products.Any())
                 {
                     var productsData = File.ReadAllText("../Infrastructure/Data/SeedData/products.json");
+
                     var products = JsonSerializer.Deserialize<List<Product>>(productsData);
 
                     foreach (var item in products)

@@ -20,6 +20,7 @@ export class ErrorInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(
       //delay(1000),
       catchError(error => {
+        
         if (error) {
 
           if (error.status === 400) {

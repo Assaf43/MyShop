@@ -30,7 +30,7 @@ namespace Infrastructure.Services
             {
                 var productItems = await _unitOfWork.Repository<Product>().GetByIdAsync(item.Id);
                 var itemOrderd = new ProductItemOrderd(productItems.Id, productItems.Name, productItems.PictureUrl);
-                var orderItem = new OrderItem(itemOrderd, productItems.price, item.Quantity);
+                var orderItem = new OrderItem(itemOrderd, productItems.Price, item.Quantity);
                 items.Add(orderItem);
             }
 
